@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    {% load staticfiles %}
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainApp/static/style.css' %}" />
+</head>
+<body>
+    {% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4">
+                    <div class="menuBar">
+                        <div class="main-block">
+                            <img src="{% static 'mainApp/static/images/main_logo.png' %}" />
+                            <div class="nav-default nav-left">
+                                <ul class="menu">
+                                    <li><a href="">ABOUT</a></li>
+                                    <li><a href="">PURCHASE</a></li>
+                                    <li><a href="">LOOKBOOK</a></li>
+                                    <li><a href="">GALLERY</a></li>
+                                    <li><a href="">COOPERATION</a></li>
+                                    <li><a href="">SHIPPING INFORMATION</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+</body>
+</html>
