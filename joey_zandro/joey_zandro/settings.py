@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainApp',
+    'userCart',
 ]
 
 MIDDLEWARE = [
@@ -78,8 +79,13 @@ WSGI_APPLICATION = 'joey_zandro.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'joey_zandro_db',
+        'USER': 'niks',
+        'PASSWORD': 'bullet115',
+        'OPTIONS': {
+            'read_default_file': '/path/to/my.cnf',
+        },
     }
 }
 
@@ -114,7 +120,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -124,3 +130,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+CART_SESSION_ID = 'cart'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
+AUTH_USER_MODEL = 'mainApp.Customer'
