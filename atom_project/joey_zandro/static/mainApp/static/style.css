@@ -1,0 +1,82 @@
+@font-face {
+    font-family: Century Gothic;
+    src: url(fonts/GOTHIC.TTF);
+}
+
+body {
+    background: url("images/background.jpg") no-repeat;
+    background-size: 100%;
+    height: 100%;
+}
+
+.menuBar {
+    text-align: center;
+    margin-bottom: 260px;
+    margin-top: 150px;
+}
+
+.main-block {
+    position: relative;
+    background-image: url('images/white_block.jpg');
+    width: 269px;
+    height: 409px;
+    padding-top: 10%;
+}
+
+.top {
+    position: absolute;
+}
+
+li {
+    list-style-type: none;
+    text-align: left;
+    font-family: Calibri;
+}
+
+.main-flex-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: auto;
+    text-align: center;
+}
+
+.menu-block {
+    text-align: center;
+    width: 269px;
+    height: 409px;
+}
+
+.menu-back {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-left > .menu > li > a:hover {
+    color: darkred;
+    background: none;
+    text-decoration: none;
+}
+
+.nav-left {
+    text-align: center;
+}
+
+.menu {
+    margin-top: 40%;
+}
+
+.menu > li > a {
+    font-size: 12px;
+}
+
+.nav-left > .menu > li > a:link {
+    color: black;
+}
